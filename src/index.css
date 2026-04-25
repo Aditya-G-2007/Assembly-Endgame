@@ -1,0 +1,178 @@
+/* Base Container Styles */
+body {
+  background-color: #282726;
+  color: #f9f4da;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* 1. The Win/Loss Status Boxes */
+.status-box {
+  width: 100%;
+  max-width: 400px;
+  padding: 15px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.won {
+  background-color: #10ac84; /* Green */
+  color: white;
+}
+
+.lost {
+  background-color: #ba3030; /* Red */
+  color: white;
+}
+
+/* 2. Programming Language Chips (AttemptsButtons) */
+.attempts-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+
+}
+/*  my attempts array buttons */
+.alive {
+  background-color: #6D7FF7; /* Your requested color */
+  color: black;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  margin-right: 8px;
+  margin-bottom: 20px;
+}
+
+.dead {
+  background-color: #ba3030;
+  color: white;
+  opacity: 0.4; /* Opacity for dead languages */
+  text-decoration: line-through; /* Strike-through line */
+  padding: 6px 12px;
+  border-radius: 4px;
+  border: none;
+  font-size: 0.8rem;
+  margin-right:8px;
+  margin-bottom: 8px;
+}
+
+/* 3. container for my input boxes*/
+.input-container {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 40px;
+}
+/* input box button*/
+.InputBox {
+  width: 40px;
+  height: 40px;
+  background-color: #323232;
+  border-bottom: 2px solid #f9f4da;
+  display: flex;
+  flex-direction: row;  
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f9f4da;
+  border-top-style: none;
+  border-left-style: none;
+  border-right-style:none;
+}
+
+/* 4. Alphabet Keyboard Buttons */
+.alphabet-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 500px;
+  gap: 8px;
+}
+
+.alphabet-btn {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.1s active;
+  margin-right: 8px;
+}
+
+/* alphabets button present here*/
+.yellow {
+  height:30px;
+  width: 30px;
+  background-color: #fcba03;
+  color: #282726;
+  font-weight: bold;
+  border-style: none;
+  margin-right: 8px;
+  
+}
+
+.green {
+  height:30px;
+  width: 30px;
+  background-color: #10ac84;
+  color: white;
+  font-weight: bold;
+  border-style: none;
+  margin-right: 8px;
+}
+
+.red {
+  height:30px;
+  width: 30px;
+  background-color: #ba3030;
+  color: white;
+  opacity: 0.7;
+  font-weight: bold;
+  border-style: none;
+  margin-right: 8px;
+}
+
+/* 5. New Game Button */
+.play-again-btn {
+  margin-top: 30px;
+  background-color: #11b5e5;
+  border: none;
+  padding: 10px 40px;
+  border-radius: 4px;
+  color: #282726;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
