@@ -1,16 +1,36 @@
-# React + Vite
+# ⚛️ Assembly Endgame
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Assembly Endgame** is a high-stakes, word-guessing game designed to test your vocabulary while "saving" the world of web development. As you guess letters incorrectly, the programming languages you know and love are "eliminated" one by one. Can you crack the code before all your languages are gone?
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Key Features
 
-## React Compiler
+* **Language Protection System:** Eight distinct programming languages act as your "lives."
+* **Dynamic Status Messaging:** Real-time feedback that changes based on your last guess and game progress.
+* **Responsive Keyboard:** A custom-built virtual keyboard that tracks used letters and game state.
+* **Accessibility First:** Built with `aria-live` regions to ensure the game state is communicated clearly to screen readers.
+* **Confetti Celebration:** Integrated visual rewards for winning the game.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Technical Deep Dive
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Complex State Management
+The core engine relies on a unified state architecture to keep the UI in sync. By deriving as much data as possible from a few central states, the app remains performant and bug-free:
+
+* **Derived State:** Instead of manual trackers, the game calculates "wrong guesses" and "game over" status on the fly based on the `guessedLetters` array.
+* **Game Flow Logic:** Complex conditional logic determines if the user has won (all letters found) or lost (all languages eliminated), triggering specific UI transitions.
+
+### React Hooks Mastery
+* **`useState`**: Managed for tracking the secret word and the collection of guessed characters.
+* **`useEffect`**: Used for side effects like handling keyboard events or triggering focus shifts for accessibility.
+* **Refined Components:** Functional components organized for maximum reusability and readability.
+
+### Clean UI & UX
+* **Visual Feedback:** Each incorrect guess triggers a "Farewell" message for a specific language using specialized CSS transitions.
+* **Polished Styling:** A sleek, dark-mode-inspired aesthetic using **Flexbox** and **Grid** for a perfectly centered, responsive layout.
+* **Interactive Elements:** Buttons provide tactile feedback and visual cues:
+    * 🟩 **Green**: Correct guess
+    * 🟥 **Red**: Incorrect guess
+    * ⚪ **Dimmed**: Already used letters
