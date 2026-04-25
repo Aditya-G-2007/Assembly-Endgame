@@ -25,7 +25,7 @@ The core engine relies on a unified state architecture to keep the UI in sync. B
 ### React Hooks Mastery
 * **`useState`**: Managed for tracking the secret word and the collection of guessed characters.
 * **`useEffect`**: Used for side effects like handling keyboard events or triggering focus shifts for accessibility.
-* * **`useRef`**: used for storing essential details which stay even after rerenders
+* **`useRef`**: used for storing essential details which stay even after rerenders
 * **Refined Components:** Functional components organized for maximum reusability and readability.
 
 ### Clean UI & UX
